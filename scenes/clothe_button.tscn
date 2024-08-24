@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ldn3efdl7orw"]
+
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_k5rr7"]
+[ext_resource type="Texture2D" uid="uid://dd2arb0k1nc2q" path="res://assets/Button Blue.png" id="1_q3uay"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ckrym"]
+radius = 32.0
+
+[node name="ClotheButton" type="RigidBody2D"]
+script = ExtResource("1_k5rr7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, 1.13687e-13)
+scale = Vector2(0.242509, 0.242509)
+texture = ExtResource("1_q3uay")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ckrym")

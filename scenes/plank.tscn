@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgejdbjvcji2"]
+
+[ext_resource type="Texture2D" uid="uid://8vmw1jh8vog6" path="res://assets/Plank.png" id="1_pw7tk"]
+[ext_resource type="Shader" path="res://outline.gdshader" id="2_hjy2x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2j5r"]
+shader = ExtResource("2_hjy2x")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/width = 5.0
+shader_parameter/pattern = 0
+shader_parameter/inside = false
+shader_parameter/add_margins = true
+shader_parameter/number_of_images = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oia6v"]
+size = Vector2(70, 6.46292)
+
+[node name="Plank" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_d2j5r")
+position = Vector2(0, 2.98023e-08)
+scale = Vector2(0.065, 0.0451128)
+texture = ExtResource("1_pw7tk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.11759e-07)
+scale = Vector2(0.98, 0.858)
+shape = SubResource("RectangleShape2D_oia6v")
