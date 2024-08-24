@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc5c80uujrpwr"]
+
+[ext_resource type="Script" path="res://scripts/sewing_string.gd" id="1_7r74v"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_34b48"]
+b = Vector2(10, 10)
+
+[node name="SewingString" type="Line2D"]
+z_index = -10
+points = PackedVector2Array(0, 0, 10, 10)
+width = 1.0
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("1_7r74v")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_34b48")
+
+[node name="StringJoint" type="DampedSpringJoint2D" parent="."]
+disable_collision = false
+length = 10.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

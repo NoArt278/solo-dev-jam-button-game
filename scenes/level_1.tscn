@@ -9,6 +9,7 @@
 [node name="Level 1" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -50
 position = Vector2(573.2, 355)
 scale = Vector2(0.2856, 0.2856)
 texture = ExtResource("1_e5p57")
@@ -22,7 +23,7 @@ position = Vector2(573, 321)
 position = Vector2(129.2, 267)
 
 [node name="RedButton" parent="ClotheButtons" instance=ExtResource("2_rdf0p")]
-position = Vector2(207, 312)
+position = Vector2(249, 127)
 is_blue = false
 
 [node name="Planks" type="Node" parent="."]
@@ -38,6 +39,10 @@ scale = Vector2(6.294, 5.84)
 
 [node name="Plank3" parent="Planks" instance=ExtResource("4_wei6m")]
 position = Vector2(584.2, 489)
+scale = Vector2(6.465, 5.84)
+
+[node name="Plank4" parent="Planks" instance=ExtResource("4_wei6m")]
+position = Vector2(424, 184)
 scale = Vector2(6.465, 5.84)
 
 [node name="Chest" parent="." instance=ExtResource("5_ixmr2")]

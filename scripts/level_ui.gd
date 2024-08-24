@@ -10,6 +10,10 @@ func _ready() -> void:
 	blue_button = clothe_buttons.find_child("BlueButton")
 	red_button = clothe_buttons.find_child("RedButton")
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("pause") :
+		get_tree().paused = not(get_tree().paused)
+
 func _on_start_btn_pressed() -> void:
 	start_btn.disabled = true
 	blue_button.start()
