@@ -22,7 +22,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("add_string") and is_mouse_hovered and curr_sew_string == null :
-		print("make string")
 		curr_sew_string = SEWING_STRING.instantiate()
 		add_child(curr_sew_string)
 

@@ -9,8 +9,8 @@ var parent_button : Node2D
 
 func _ready() -> void:
 	col_shape = collision_shape_2d.shape
-	string_joint.node_a = self.get_path()
 	parent_button = get_parent()
+	string_joint.node_a = parent_button.get_path()
 
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("destroy_string") and is_mouse_hovered) or (Input.is_action_just_released("add_string") and (string_joint.node_a == null or string_joint.node_b.is_empty())):
@@ -34,5 +34,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is ClotheButton and parent_button != body:
 		string_joint.node_b = body.get_path()
 		string_joint.length = parent_button.global_position.distance_to(body.global_position)
-		print(string_joint.length)
 		connected_button = body

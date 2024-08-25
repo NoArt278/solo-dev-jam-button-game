@@ -42,8 +42,8 @@ position = Vector2(584.2, 489)
 scale = Vector2(6.465, 5.84)
 
 [node name="Plank4" parent="Planks" instance=ExtResource("4_wei6m")]
-position = Vector2(424, 184)
-scale = Vector2(6.465, 5.84)
+position = Vector2(354, 184)
+scale = Vector2(3.45307, 5.84)
 
 [node name="Chest" parent="." instance=ExtResource("5_ixmr2")]
 z_index = 10

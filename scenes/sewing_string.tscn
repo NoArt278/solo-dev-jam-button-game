@@ -8,21 +8,22 @@ b = Vector2(10, 10)
 [node name="SewingString" type="Line2D"]
 z_index = -10
 points = PackedVector2Array(0, 0, 10, 10)
-width = 1.0
+width = 5.0
 begin_cap_mode = 2
 end_cap_mode = 2
 script = ExtResource("1_7r74v")
 
 [node name="Area2D" type="Area2D" parent="."]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("SegmentShape2D_34b48")
 
 [node name="StringJoint" type="DampedSpringJoint2D" parent="."]
 disable_collision = false
-length = 10.0
+stiffness = 5.0
+damping = 0.7
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
