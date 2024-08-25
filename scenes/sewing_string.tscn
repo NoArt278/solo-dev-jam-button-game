@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/sewing_string.gd" id="1_7r74v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g05oc"]
-size = Vector2(15, 10)
+size = Vector2(30.725, 3)
 
 [node name="SewingString" type="Line2D"]
 z_index = -10
@@ -25,8 +25,6 @@ shape = SubResource("RectangleShape2D_g05oc")
 
 [node name="StringJoint" type="DampedSpringJoint2D" parent="."]
 disable_collision = false
-stiffness = 5.0
-damping = 0.7
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

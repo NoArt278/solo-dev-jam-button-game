@@ -18,15 +18,6 @@ texture = ExtResource("1_e5p57")
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(573, 321)
 
-[node name="ClotheButtons" type="Node" parent="."]
-
-[node name="BlueButton" parent="ClotheButtons" instance=ExtResource("2_rdf0p")]
-position = Vector2(129.2, 267)
-
-[node name="RedButton" parent="ClotheButtons" instance=ExtResource("2_rdf0p")]
-position = Vector2(249, 127)
-is_blue = false
-
 [node name="Planks" type="Node" parent="."]
 
 [node name="Plank" parent="Planks" instance=ExtResource("4_wei6m")]
@@ -43,13 +34,22 @@ position = Vector2(584.2, 489)
 scale = Vector2(6.465, 5.84)
 
 [node name="Plank4" parent="Planks" instance=ExtResource("4_wei6m")]
-position = Vector2(338, 177)
-scale = Vector2(3.45307, 5.84)
+position = Vector2(252, 177)
+scale = Vector2(1.368, 5.84)
 
 [node name="Chest" parent="." instance=ExtResource("5_ixmr2")]
 z_index = 10
 position = Vector2(984.2, 516)
 scale = Vector2(1.96, 1.96)
+
+[node name="ClotheButtons" type="Node" parent="."]
+
+[node name="BlueButton" parent="ClotheButtons" instance=ExtResource("2_rdf0p")]
+position = Vector2(77, 229)
+
+[node name="RedButton" parent="ClotheButtons" instance=ExtResource("2_rdf0p")]
+position = Vector2(250, 122)
+is_blue = false
 
 [node name="LevelUI" parent="." instance=ExtResource("6_w84ef")]
 

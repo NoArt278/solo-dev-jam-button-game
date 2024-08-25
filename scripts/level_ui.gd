@@ -13,7 +13,7 @@ func _ready() -> void:
 	red_button = clothe_buttons.find_child("RedButton")
 	chest.level_finished.connect(level_finished)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause") :
 		get_tree().paused = not(get_tree().paused)
 
