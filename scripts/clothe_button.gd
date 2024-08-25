@@ -9,8 +9,6 @@ const SEWING_STRING = preload("res://scenes/sewing_string.tscn")
 
 @export var is_blue : bool = true
 var is_mouse_hovered : bool = false
-var is_string_entered : bool = false
-var curr_sew_string : Line2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,8 +19,8 @@ func _ready() -> void:
 	freeze = true
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_pressed("add_string") and is_mouse_hovered and curr_sew_string == null :
-		curr_sew_string = SEWING_STRING.instantiate()
+	if Input.is_action_just_pressed("add_string") and is_mouse_hovered :
+		var curr_sew_string = SEWING_STRING.instantiate()
 		add_child(curr_sew_string)
 
 func start() -> void:
