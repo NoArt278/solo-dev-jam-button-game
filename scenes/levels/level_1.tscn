@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://e7y05ujpoj5c"]
+[gd_scene load_steps=7 format=3 uid="uid://e7y05ujpoj5c"]
 
 [ext_resource type="Texture2D" uid="uid://pbieqxqf8jhp" path="res://assets/Background.png" id="1_e5p57"]
 [ext_resource type="PackedScene" uid="uid://ldn3efdl7orw" path="res://scenes/clothe_button.tscn" id="2_rdf0p"]
 [ext_resource type="PackedScene" uid="uid://dgejdbjvcji2" path="res://scenes/plank.tscn" id="4_wei6m"]
 [ext_resource type="PackedScene" uid="uid://b5ta7dpfag3j1" path="res://scenes/chest.tscn" id="5_ixmr2"]
+[ext_resource type="PackedScene" uid="uid://c1q2fxokjht8r" path="res://scenes/level_finish_ui.tscn" id="6_c77er"]
 [ext_resource type="PackedScene" uid="uid://0jh6pi8pamc0" path="res://scenes/level_ui.tscn" id="6_w84ef"]
 
 [node name="Level 1" type="Node2D"]
@@ -42,7 +43,7 @@ position = Vector2(584.2, 489)
 scale = Vector2(6.465, 5.84)
 
 [node name="Plank4" parent="Planks" instance=ExtResource("4_wei6m")]
-position = Vector2(354, 184)
+position = Vector2(338, 177)
 scale = Vector2(3.45307, 5.84)
 
 [node name="Chest" parent="." instance=ExtResource("5_ixmr2")]
@@ -50,4 +51,6 @@ z_index = 10
 position = Vector2(984.2, 516)
 scale = Vector2(1.96, 1.96)
 
-[node name="Control" parent="." instance=ExtResource("6_w84ef")]
+[node name="LevelUI" parent="." instance=ExtResource("6_w84ef")]
+
+[node name="LevelFinishUI" parent="." instance=ExtResource("6_c77er")]

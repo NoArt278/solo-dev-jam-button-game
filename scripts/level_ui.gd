@@ -5,10 +5,13 @@ extends Control
 @onready var blue_button: ClotheButton
 @onready var red_button: ClotheButton
 @onready var clothe_buttons: Node = $"../ClotheButtons"
+@onready var chest: Chest = $"../Chest"
+@onready var level_finish_ui: Control = $"../LevelFinishUI"
 
 func _ready() -> void:
 	blue_button = clothe_buttons.find_child("BlueButton")
 	red_button = clothe_buttons.find_child("RedButton")
+	chest.level_finished.connect(level_finished)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("pause") :
@@ -21,3 +24,7 @@ func _on_start_btn_pressed() -> void:
 
 func _on_reset_btn_pressed() -> void:
 	get_tree().reload_current_scene()
+
+func level_finished() -> void:
+	level_finish_ui.visible = true
+	visible = false
