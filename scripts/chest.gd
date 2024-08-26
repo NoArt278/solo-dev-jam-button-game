@@ -10,6 +10,7 @@ signal level_finished
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is ClotheButton :
 		body.collision_layer = 8
+		body.collision_mask = 8
 		if body.name == "BlueButton" :
 			is_blue_entered = true
 		else :

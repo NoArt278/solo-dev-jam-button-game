@@ -65,12 +65,14 @@ layout_mode = 0
 offset_left = 383.0
 offset_top = 181.0
 offset_right = 999.0
-offset_bottom = 259.0
+offset_bottom = 277.0
 theme = ExtResource("6_sh4ul")
 theme_override_font_sizes/font_size = 30
-text = "Left click and drag on buttons to draw a string to connect buttons.
+text = "Left click and drag on a button to draw a string to connect buttons.
 Right click anywhere to destroy string.
-Press Start to make buttons roll."
+Press Start to make buttons roll.
+
+! The button you click is heavier on the string."
 label_settings = SubResource("LabelSettings_8tuv1")
 
 [node name="LevelFinishUI" parent="." instance=ExtResource("6_c77er")]
