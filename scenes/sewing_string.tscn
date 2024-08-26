@@ -23,8 +23,8 @@ shape = SubResource("RectangleShape2D_g05oc")
 
 [node name="StringJoint" type="DampedSpringJoint2D" parent="."]
 disable_collision = false
-rest_length = 1.0
-stiffness = 30.0
+stiffness = 64.0
+damping = 0.7
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

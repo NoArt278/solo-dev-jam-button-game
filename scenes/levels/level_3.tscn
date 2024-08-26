@@ -11,7 +11,7 @@
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -50
-position = Vector2(573.2, 355)
+position = Vector2(573.2, 357)
 scale = Vector2(0.2856, 0.2856)
 texture = ExtResource("1_5jfm0")
 
@@ -25,13 +25,13 @@ position = Vector2(466, 617)
 scale = Vector2(3.20616, 5.84)
 
 [node name="Plank2" parent="Planks" instance=ExtResource("3_mvh46")]
-position = Vector2(459, 160)
+position = Vector2(459, 144)
 rotation = 0.26435
 scale = Vector2(3.694, 5.84)
 
 [node name="Plank3" parent="Planks" instance=ExtResource("3_mvh46")]
-position = Vector2(474, 364)
-scale = Vector2(3.5, 5.84)
+position = Vector2(449, 374)
+scale = Vector2(2.935, 5.84)
 
 [node name="Plank4" parent="Planks" instance=ExtResource("3_mvh46")]
 position = Vector2(717, 457)
@@ -39,11 +39,11 @@ rotation = -0.464707
 scale = Vector2(4.679, 5.84)
 
 [node name="Plank5" parent="Planks" instance=ExtResource("3_mvh46")]
-position = Vector2(738, 272)
+position = Vector2(669, 273)
 scale = Vector2(2.24, 5.84)
 
 [node name="Plank6" parent="Planks" instance=ExtResource("3_mvh46")]
-position = Vector2(799, 211)
+position = Vector2(730, 212)
 rotation = 1.5708
 scale = Vector2(2.24, 5.84)
 
