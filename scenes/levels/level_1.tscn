@@ -72,7 +72,7 @@ text = "Left click and drag on a button to draw a string to connect buttons.
 Right click anywhere to destroy string.
 Press Start to make buttons roll.
 
-! The button you click is heavier on the string."
+! The button you click will have a stronger pull on the string."
 label_settings = SubResource("LabelSettings_8tuv1")
 
 [node name="LevelFinishUI" parent="." instance=ExtResource("6_c77er")]

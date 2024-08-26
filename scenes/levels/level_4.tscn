@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://0jh6pi8pamc0" path="res://scenes/level_ui.tscn" id="5_2cw45"]
 [ext_resource type="PackedScene" uid="uid://c1q2fxokjht8r" path="res://scenes/level_finish_ui.tscn" id="6_cw72n"]
 
-[node name="Level 3" type="Node2D"]
+[node name="Level 4" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -50
