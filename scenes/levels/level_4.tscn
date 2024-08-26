@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://ciikfiwcymaa3"]
+
+[ext_resource type="Texture2D" uid="uid://pbieqxqf8jhp" path="res://assets/Background.png" id="1_18n6s"]
+[ext_resource type="PackedScene" uid="uid://dgejdbjvcji2" path="res://scenes/plank.tscn" id="2_gbfoy"]
+[ext_resource type="PackedScene" uid="uid://b5ta7dpfag3j1" path="res://scenes/chest.tscn" id="3_4eleu"]
+[ext_resource type="PackedScene" uid="uid://ldn3efdl7orw" path="res://scenes/clothe_button.tscn" id="4_0brp1"]
+[ext_resource type="PackedScene" uid="uid://0jh6pi8pamc0" path="res://scenes/level_ui.tscn" id="5_2cw45"]
+[ext_resource type="PackedScene" uid="uid://c1q2fxokjht8r" path="res://scenes/level_finish_ui.tscn" id="6_cw72n"]
+
+[node name="Level 3" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(573.2, 355)
+scale = Vector2(0.2856, 0.2856)
+texture = ExtResource("1_18n6s")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(573, 321)
+
+[node name="Planks" type="Node" parent="."]
+
+[node name="Plank" parent="Planks" instance=ExtResource("2_gbfoy")]
+position = Vector2(466, 617)
+scale = Vector2(3.20616, 5.84)
+
+[node name="Plank2" parent="Planks" instance=ExtResource("2_gbfoy")]
+position = Vector2(459, 160)
+rotation = 0.26435
+scale = Vector2(3.694, 5.84)
+
+[node name="Plank3" parent="Planks" instance=ExtResource("2_gbfoy")]
+position = Vector2(474, 364)
+scale = Vector2(3.5, 5.84)
+
+[node name="Plank4" parent="Planks" instance=ExtResource("2_gbfoy")]
+position = Vector2(717, 457)
+rotation = -0.464707
+scale = Vector2(4.679, 5.84)
+
+[node name="Plank5" parent="Planks" instance=ExtResource("2_gbfoy")]
+position = Vector2(738, 272)
+scale = Vector2(2.24, 5.84)
+
+[node name="Plank6" parent="Planks" instance=ExtResource("2_gbfoy")]
+position = Vector2(828, 211)
+rotation = 1.5708
+scale = Vector2(2.24, 5.84)
+
+[node name="Chest" parent="." instance=ExtResource("3_4eleu")]
+z_index = 10
+position = Vector2(394, 534)
+scale = Vector2(-1.96, 1.96)
+
+[node name="ClotheButtons" type="Node" parent="."]
+
+[node name="BlueButton" parent="ClotheButtons" instance=ExtResource("4_0brp1")]
+position = Vector2(395, 68)
+
+[node name="RedButton" parent="ClotheButtons" instance=ExtResource("4_0brp1")]
+position = Vector2(389, 295)
+is_blue = false
+
+[node name="LevelUI" parent="." instance=ExtResource("5_2cw45")]
+
+[node name="LevelFinishUI" parent="." instance=ExtResource("6_cw72n")]

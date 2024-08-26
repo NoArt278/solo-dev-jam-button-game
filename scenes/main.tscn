@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://ck18ome4akh2h"]
+
+[ext_resource type="Texture2D" uid="uid://pbieqxqf8jhp" path="res://assets/Background.png" id="1_c6k5q"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_4nipy"]
+[ext_resource type="Theme" uid="uid://c7fwm4sb4mhlh" path="res://assets/ui_theme.tres" id="2_otq0p"]
+[ext_resource type="PackedScene" uid="uid://ldn3efdl7orw" path="res://scenes/clothe_button.tscn" id="3_i3qeb"]
+[ext_resource type="PackedScene" uid="uid://dgejdbjvcji2" path="res://scenes/plank.tscn" id="5_knjyg"]
+[ext_resource type="PackedScene" uid="uid://b5ta7dpfag3j1" path="res://scenes/chest.tscn" id="6_b3jkq"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(573.2, 355)
+scale = Vector2(0.2856, 0.2856)
+texture = ExtResource("1_c6k5q")
+
+[node name="LevelManager" type="Node" parent="."]
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1145.0
+offset_bottom = 714.0
+script = ExtResource("2_4nipy")
+
+[node name="Label" type="Label" parent="MainMenu"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 268.0
+offset_right = 762.0
+offset_bottom = 382.0
+theme = ExtResource("2_otq0p")
+theme_override_font_sizes/font_size = 150
+text = "BOBANTE"
+
+[node name="StartButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 413.0
+offset_right = 574.0
+offset_bottom = 457.0
+theme = ExtResource("2_otq0p")
+text = "START"
+
+[node name="ClotheButton" parent="." instance=ExtResource("3_i3qeb")]
+position = Vector2(283, 233)
+
+[node name="ClotheButton2" parent="." instance=ExtResource("3_i3qeb")]
+position = Vector2(792, 393)
+is_blue = false
+
+[node name="ClotheButton3" parent="." instance=ExtResource("3_i3qeb")]
+position = Vector2(319, 392)
+is_blue = false
+
+[node name="ClotheButton4" parent="." instance=ExtResource("3_i3qeb")]
+position = Vector2(764, 223)
+
+[node name="Planks" type="Node" parent="."]
+
+[node name="Plank3" parent="Planks" instance=ExtResource("5_knjyg")]
+position = Vector2(570, 598)
+scale = Vector2(16.92, 5.84)
+
+[node name="Chest" parent="." instance=ExtResource("6_b3jkq")]
+z_index = 10
+position = Vector2(598, 512)
+scale = Vector2(1.96, 1.96)
+
+[connection signal="pressed" from="MainMenu/StartButton" to="MainMenu" method="start_game"]

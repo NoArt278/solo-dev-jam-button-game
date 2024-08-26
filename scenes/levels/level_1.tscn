@@ -62,10 +62,10 @@ is_blue = false
 
 [node name="Label" type="Label" parent="LevelUI"]
 layout_mode = 0
-offset_left = 383.0
+offset_left = 398.0
 offset_top = 181.0
-offset_right = 999.0
-offset_bottom = 277.0
+offset_right = 1014.0
+offset_bottom = 293.0
 theme = ExtResource("6_sh4ul")
 theme_override_font_sizes/font_size = 30
 text = "Left click and drag on a button to draw a string to connect buttons.
