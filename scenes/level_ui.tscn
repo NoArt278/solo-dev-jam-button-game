@@ -32,5 +32,15 @@ offset_bottom = 137.0
 theme = ExtResource("2_dj7k3")
 text = "Reset"
 
+[node name="SkipBtn" type="Button" parent="."]
+offset_left = 33.0
+offset_top = 594.0
+offset_right = 107.0
+offset_bottom = 632.0
+theme = ExtResource("2_dj7k3")
+text = "Skip
+"
+
 [connection signal="pressed" from="StartBtn" to="." method="_on_start_btn_pressed"]
 [connection signal="pressed" from="ResetBtn" to="." method="_on_reset_btn_pressed"]
+[connection signal="pressed" from="SkipBtn" to="." method="_on_skip_btn_pressed"]

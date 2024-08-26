@@ -1,5 +1,7 @@
 extends Control
 
+class_name LevelFinish
+
 static var curr_level = 1
 const max_level = 5
 

@@ -6,7 +6,7 @@ extends Control
 @onready var red_button: ClotheButton
 @onready var clothe_buttons: Node = $"../ClotheButtons"
 @onready var chest: Chest = $"../Chest"
-@onready var level_finish_ui: Control = $"../LevelFinishUI"
+@onready var level_finish_ui: LevelFinish = $"../LevelFinishUI"
 
 func _ready() -> void:
 	blue_button = clothe_buttons.find_child("BlueButton")
@@ -28,3 +28,7 @@ func _on_reset_btn_pressed() -> void:
 func level_finished() -> void:
 	level_finish_ui.visible = true
 	visible = false
+
+
+func _on_skip_btn_pressed() -> void:
+	level_finish_ui._on_next_level_button_pressed()
