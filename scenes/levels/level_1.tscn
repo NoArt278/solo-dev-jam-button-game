@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://e7y05ujpoj5c"]
+[gd_scene load_steps=8 format=3 uid="uid://e7y05ujpoj5c"]
 
 [ext_resource type="Texture2D" uid="uid://pbieqxqf8jhp" path="res://assets/Background.png" id="1_e5p57"]
 [ext_resource type="PackedScene" uid="uid://ldn3efdl7orw" path="res://scenes/clothe_button.tscn" id="2_rdf0p"]
 [ext_resource type="PackedScene" uid="uid://dgejdbjvcji2" path="res://scenes/plank.tscn" id="4_wei6m"]
 [ext_resource type="PackedScene" uid="uid://b5ta7dpfag3j1" path="res://scenes/chest.tscn" id="5_ixmr2"]
 [ext_resource type="PackedScene" uid="uid://c1q2fxokjht8r" path="res://scenes/level_finish_ui.tscn" id="6_c77er"]
+[ext_resource type="Theme" uid="uid://c7fwm4sb4mhlh" path="res://assets/ui_theme.tres" id="6_jdfe5"]
 [ext_resource type="PackedScene" uid="uid://0jh6pi8pamc0" path="res://scenes/level_ui.tscn" id="6_w84ef"]
 
 [node name="Level 1" type="Node2D"]
@@ -52,5 +53,13 @@ position = Vector2(250, 122)
 is_blue = false
 
 [node name="LevelUI" parent="." instance=ExtResource("6_w84ef")]
+
+[node name="Label" type="Label" parent="LevelUI"]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 164.0
+offset_right = 765.0
+offset_bottom = 227.0
+theme = ExtResource("6_jdfe5")
 
 [node name="LevelFinishUI" parent="." instance=ExtResource("6_c77er")]

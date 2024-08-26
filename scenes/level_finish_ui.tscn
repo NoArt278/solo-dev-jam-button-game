@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1q2fxokjht8r"]
+[gd_scene load_steps=4 format=3 uid="uid://c1q2fxokjht8r"]
 
 [ext_resource type="Script" path="res://scripts/level_finish_ui.gd" id="1_xynjl"]
+[ext_resource type="Theme" uid="uid://c7fwm4sb4mhlh" path="res://assets/ui_theme.tres" id="2_qw2jp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8l025"]
 bg_color = Color(0, 0, 0, 0.392157)
@@ -24,11 +25,12 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8l025")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
-offset_left = 379.0
-offset_top = 285.0
-offset_right = 767.0
-offset_bottom = 354.0
-theme_override_font_sizes/normal_font_size = 50
+offset_left = 300.0
+offset_top = 290.0
+offset_right = 832.0
+offset_bottom = 375.0
+theme = ExtResource("2_qw2jp")
+theme_override_font_sizes/normal_font_size = 100
 text = "LEVEL FINISHED"
 fit_content = true
 
@@ -38,13 +40,16 @@ offset_left = 369.0
 offset_top = 431.0
 offset_right = 481.0
 offset_bottom = 473.0
+theme = ExtResource("2_qw2jp")
 text = "Next Level"
 
 [node name="RetryButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 648.0
 offset_top = 431.0
 offset_right = 760.0
 offset_bottom = 473.0
+theme = ExtResource("2_qw2jp")
 text = "Retry"
 
 [connection signal="pressed" from="NextLevelButton" to="." method="_on_next_level_button_pressed"]
