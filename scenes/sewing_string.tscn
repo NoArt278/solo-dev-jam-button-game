@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/sewing_string.gd" id="1_7r74v"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g05oc"]
-size = Vector2(30.725, 3)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rs718"]
 
 [node name="SewingString" type="Line2D"]
 z_index = -10
@@ -19,7 +18,7 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_g05oc")
+shape = SubResource("SegmentShape2D_rs718")
 
 [node name="StringJoint" type="DampedSpringJoint2D" parent="."]
 disable_collision = false

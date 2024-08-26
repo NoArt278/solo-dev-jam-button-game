@@ -4,7 +4,7 @@ var is_mouse_hovered : bool = false
 @onready var string_joint: DampedSpringJoint2D = $StringJoint
 @onready var collision_shape_2d: CollisionShape2D = $Area2D/CollisionShape2D
 static var instantiated_line : Line2D
-var col_shape : RectangleShape2D
+var col_shape : SegmentShape2D
 var connected_button : Node2D
 var parent_button : Node2D
 
@@ -21,9 +21,7 @@ func _process(_delta: float) -> void:
 		set_point_position(1, to_local(get_global_mouse_position()))
 	if (!string_joint.node_b.is_empty()) :
 		set_point_position(1, to_local(connected_button.position))
-	collision_shape_2d.position = get_point_position(1)/2
-	collision_shape_2d.rotation = global_position.direction_to(to_global(get_point_position(1))).angle()
-	col_shape.size.x = position.distance_to(get_point_position(1))
+	col_shape.b = get_point_position(1)
 
 func _on_area_2d_mouse_entered() -> void:
 	is_mouse_hovered = true
