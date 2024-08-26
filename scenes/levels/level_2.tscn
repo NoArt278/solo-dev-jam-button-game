@@ -21,7 +21,7 @@ position = Vector2(573, 321)
 [node name="ClotheButtons" type="Node" parent="."]
 
 [node name="BlueButton" parent="ClotheButtons" instance=ExtResource("2_0fsoa")]
-position = Vector2(129.2, 267)
+position = Vector2(211, 228)
 
 [node name="RedButton" parent="ClotheButtons" instance=ExtResource("2_0fsoa")]
 position = Vector2(249, 127)
@@ -29,26 +29,28 @@ is_blue = false
 
 [node name="Planks" type="Node" parent="."]
 
+[node name="Plank3" parent="Planks" instance=ExtResource("3_uqg7q")]
+position = Vector2(620, 341)
+rotation = 1.5708
+scale = Vector2(2.455, 5.84)
+
 [node name="Plank" parent="Planks" instance=ExtResource("3_uqg7q")]
-position = Vector2(926.2, 599)
-scale = Vector2(6.465, 5.84)
+position = Vector2(763, 623)
+scale = Vector2(3.56, 5.84)
 
 [node name="Plank2" parent="Planks" instance=ExtResource("3_uqg7q")]
-position = Vector2(213.2, 388)
-rotation = 0.502655
-scale = Vector2(6.294, 5.84)
-
-[node name="Plank3" parent="Planks" instance=ExtResource("3_uqg7q")]
-position = Vector2(584.2, 489)
-scale = Vector2(6.465, 5.84)
+position = Vector2(401, 229)
+rotation = 0.319748
+scale = Vector2(9.519, 5.84)
 
 [node name="Plank4" parent="Planks" instance=ExtResource("3_uqg7q")]
-position = Vector2(354, 184)
-scale = Vector2(3.45307, 5.84)
+position = Vector2(534, 507)
+rotation = 0.319748
+scale = Vector2(4.019, 5.84)
 
 [node name="Chest" parent="." instance=ExtResource("4_75a0p")]
 z_index = 10
-position = Vector2(984.2, 516)
+position = Vector2(821, 540)
 scale = Vector2(1.96, 1.96)
 
 [node name="Control" parent="." instance=ExtResource("5_x43pl")]

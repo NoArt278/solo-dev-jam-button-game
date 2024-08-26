@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://e7y05ujpoj5c"]
+[gd_scene load_steps=10 format=3 uid="uid://e7y05ujpoj5c"]
 
 [ext_resource type="Texture2D" uid="uid://pbieqxqf8jhp" path="res://assets/Background.png" id="1_e5p57"]
 [ext_resource type="PackedScene" uid="uid://ldn3efdl7orw" path="res://scenes/clothe_button.tscn" id="2_rdf0p"]
 [ext_resource type="PackedScene" uid="uid://dgejdbjvcji2" path="res://scenes/plank.tscn" id="4_wei6m"]
 [ext_resource type="PackedScene" uid="uid://b5ta7dpfag3j1" path="res://scenes/chest.tscn" id="5_ixmr2"]
 [ext_resource type="PackedScene" uid="uid://c1q2fxokjht8r" path="res://scenes/level_finish_ui.tscn" id="6_c77er"]
-[ext_resource type="Theme" uid="uid://c7fwm4sb4mhlh" path="res://assets/ui_theme.tres" id="6_jdfe5"]
+[ext_resource type="Theme" uid="uid://c7fwm4sb4mhlh" path="res://assets/ui_theme.tres" id="6_sh4ul"]
 [ext_resource type="PackedScene" uid="uid://0jh6pi8pamc0" path="res://scenes/level_ui.tscn" id="6_w84ef"]
+[ext_resource type="FontFile" uid="uid://bxhx5jm3v3t02" path="res://assets/fonts/Handwriting-Regular.otf" id="6_xqfog"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8tuv1"]
+font = ExtResource("6_xqfog")
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="Level 1" type="Node2D"]
 
@@ -56,10 +62,15 @@ is_blue = false
 
 [node name="Label" type="Label" parent="LevelUI"]
 layout_mode = 0
-offset_left = 535.0
-offset_top = 164.0
-offset_right = 765.0
-offset_bottom = 227.0
-theme = ExtResource("6_jdfe5")
+offset_left = 383.0
+offset_top = 181.0
+offset_right = 999.0
+offset_bottom = 259.0
+theme = ExtResource("6_sh4ul")
+theme_override_font_sizes/font_size = 30
+text = "Left click and drag on buttons to draw a string to connect buttons.
+Right click anywhere to destroy string.
+Press Start to make buttons roll."
+label_settings = SubResource("LabelSettings_8tuv1")
 
 [node name="LevelFinishUI" parent="." instance=ExtResource("6_c77er")]

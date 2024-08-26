@@ -34,6 +34,7 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is ClotheButton and parent_button != body and connected_button == null:
 		string_joint.node_b = body.get_path()
+		string_joint.length = position.distance_to(body.position)/2
 		connected_button = body
 		if instantiated_line != null :
 			instantiated_line.queue_free()
