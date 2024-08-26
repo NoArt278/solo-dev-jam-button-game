@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7nxvybnwuuxr"]
+
+[ext_resource type="Texture2D" uid="uid://pbieqxqf8jhp" path="res://assets/Background.png" id="1_ift50"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_51coq"]
+[ext_resource type="Theme" uid="uid://c7fwm4sb4mhlh" path="res://assets/ui_theme.tres" id="3_5m232"]
+[ext_resource type="PackedScene" uid="uid://ldn3efdl7orw" path="res://scenes/clothe_button.tscn" id="4_eqwcg"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(573.2, 355)
+scale = Vector2(0.2856, 0.2856)
+texture = ExtResource("1_ift50")
+
+[node name="LevelManager" type="Node" parent="."]
+
+[node name="EndMenu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1145.0
+offset_bottom = 714.0
+script = ExtResource("2_51coq")
+
+[node name="Label" type="Label" parent="EndMenu"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 232.0
+offset_right = 932.0
+offset_bottom = 463.0
+theme = ExtResource("3_5m232")
+theme_override_font_sizes/font_size = 150
+text = "THANK YOU FOR
+PLAYING"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="EndMenu"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 511.0
+offset_right = 574.0
+offset_bottom = 555.0
+theme = ExtResource("3_5m232")
+text = "MAIN MENU"
+
+[node name="ClotheButton" parent="." instance=ExtResource("4_eqwcg")]
+position = Vector2(934, 183)
+
+[node name="ClotheButton2" parent="." instance=ExtResource("4_eqwcg")]
+position = Vector2(241, 425)
+
+[node name="ClotheButton3" parent="." instance=ExtResource("4_eqwcg")]
+position = Vector2(854, 428)
+is_blue = false
+
+[node name="ClotheButton4" parent="." instance=ExtResource("4_eqwcg")]
+position = Vector2(128, 217)
+is_blue = false
+
+[connection signal="pressed" from="EndMenu/BackButton" to="EndMenu" method="back_to_main"]

@@ -41,7 +41,7 @@ scale = Vector2(9.335, 5.84)
 [node name="Plank8" parent="Planks" instance=ExtResource("2_dxsh3")]
 position = Vector2(400, 506)
 rotation = 0.157577
-scale = Vector2(7.28, 5.84)
+scale = Vector2(7.295, 5.84)
 
 [node name="Plank3" parent="Planks" instance=ExtResource("2_dxsh3")]
 position = Vector2(930, 423)
